@@ -1,0 +1,16 @@
+sudo: required
+
+language: generic
+
+services: 
+  - docker
+
+before_install:
+  - echo "start Creating an image"
+  - docker build t gks/docker-react-app -f dockerfile.dev ./
+
+script:
+  - docker run -e CI=true gks/docker-react-app npm run test -- --coverage
+
+after_suceess:
+  - echo "test success!!"
