@@ -10,7 +10,7 @@ services:
      - /user/src/app/node_modules
      - ./:/user/src/app
     stdin_open: true
-tests:
+  tests:
     build:
       context: .
       dockerfile: Dockerfile.dev
