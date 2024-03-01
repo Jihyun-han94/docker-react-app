@@ -10,7 +10,7 @@ before_install:
   - docker build -t gks/docker-react-app6 -f Dockerfile.dev ./
 
 script: 
-  - docker run -e CI=true gks/docker-react-app5 npm run test -- --coverage
+  - docker run -e CI=true gks/docker-react-app6 npm run test -- --coverage
 
 deploy:
   provider: elasticbeanstalk
