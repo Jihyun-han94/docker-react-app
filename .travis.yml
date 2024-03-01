@@ -7,10 +7,10 @@ services:
 
 before_install:
   - echo "start creating an image with dockerfile"
-  - docker build -t gks/docker-react-app6 -f Dockerfile.dev ./
+  - docker build -t gks/docker-react-app7 -f Dockerfile.dev ./
 
 script: 
-  - docker run -e CI=true gks/docker-react-app6 npm run test -- --coverage
+  - docker run -e CI=true gks/docker-react-app7 npm run test -- --coverage
 
 deploy:
   provider: elasticbeanstalk
